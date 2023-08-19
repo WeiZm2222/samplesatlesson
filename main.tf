@@ -26,3 +26,13 @@ resource "aws_instance" "instances"  {  #this is just gonna be a name for terraf
     Name = "zmwCoachingWebserver"
   }
 }
+
+resource "aws_s3_bucket" "zmwbucket" {
+  # Change to a unique name
+  bucket = "zmw123456789"
+
+  tags = {
+    Name        = "zmw Second Bucket"
+    Environment = "Dev"
+  }
+}
