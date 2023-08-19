@@ -10,8 +10,8 @@ terraform {
 provider "aws" {
   region = "us-east-1"
   # Edit below, this is to authenticate our user ID for aws, do not push hardcoded access and secret keys to git 
-  access_key = secrets.AWS_ACCESS_KEY_ID
-  secret_key = secrets.AWS_SECRET_ACCESS_KEY
+  #access_key = secrets.AWS_ACCESS_KEY_ID
+  #secret_key = secrets.AWS_SECRET_ACCESS_KEY
 }
 
 resource "aws_instance" "instances"  {  #this is just gonna be a name for terraform to recognise
