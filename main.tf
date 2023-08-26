@@ -29,7 +29,7 @@ resource "aws_instance" "instances"  {  #this is just gonna be a name for terraf
 
 terraform {
   backend "s3" {
-    bucket = "sctp-ce3-tfstate-bkt"
+    bucket = "sctp-ce3-tfstate-bucket"
     key = "zmwei.tfstate"
     region = "us-east-1"
   }
