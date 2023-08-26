@@ -20,19 +20,17 @@ resource "aws_instance" "instances"  {  #this is just gonna be a name for terraf
   associate_public_ip_address = true
   subnet_id = ""
   vpc_security_group_ids = ["sg-037dc039bc9aae49d"] #the .id Points to sec group id, else can also use exisiting security group in AWS console
-  key_name = "zm-test1" #for SSH connection, created below
+  key_name = "zm-test1" #for SSH connection
  
   tags = {
-    Name = "zmwCoachingWebserver"
+    Name = "zmwCoachingWebserver1"
   }
 }
 
-resource "aws_s3_bucket" "zmwbucket" {
-  # Change to a unique name
-  bucket = "zmw123456789"
-
-  tags = {
-    Name        = "zmw Second Bucket"
-    Environment = "Dev"
+terraform {
+  backend "s3" {
+    bucket = "sctp-ce3-tfstate-bkt"
+    key = "/<name>.tfstate"
+    region = "ap-southeast-1"
   }
 }
