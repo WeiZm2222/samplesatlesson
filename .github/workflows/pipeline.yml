@@ -34,7 +34,7 @@ jobs:
 
      ##CI
    - name: Terraform Lint
-     run: terraform fmt -check
+     run: terraform fmt -recursive
 
 
    - name: Initialize Terraform
