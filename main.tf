@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -12,7 +12,7 @@ provider "aws" {
   # Edit below, this is to authenticate our user ID for aws, do not push hardcoded access and secret keys to git 
   #access_key = secrets.AWS_ACCESS_KEY_ID
   #secret_key = secrets.AWS_SECRET_ACCESS_KEY
-}
+}*/
 
 resource "aws_instance" "instances"  {  #this is just gonna be a name for terraform to recognise
   ami           = "ami-0f34c5ae932e6f0e4"  # Amazon Linux 2023 AMI
