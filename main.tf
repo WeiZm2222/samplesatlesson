@@ -31,6 +31,6 @@ terraform {
   backend "s3" {
     bucket = "sctp-ce3-tfstate-bkt"
     key = "/<name>.tfstate"
-    region = "ap-southeast-1"
+    region = "us-east-1"
   }
 }
